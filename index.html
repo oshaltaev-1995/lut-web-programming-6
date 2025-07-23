@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Population Growth</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/frappe-charts@latest/dist/frappe-charts.min.iife.js"></script>
+    <style>
+        #chart {
+            height: 450px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Population Growth in Finland</h1>
+
+    <input type="text" id="input-area" placeholder="Enter municipality name">
+    <button id="submit-data">Submit</button>
+    <button id="add-data">Predict next</button>
+    <a id="navigation" href="/newchart.html">See births & deaths</a>
+
+    <div id="chart"></div>
+
+    <script src="main.js"></script>
+</body>
+</html>
