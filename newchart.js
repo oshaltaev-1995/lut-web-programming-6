@@ -21,14 +21,14 @@ async function fetchBirthDeathData(code) {
                 code: "Tiedot",
                 selection: {
                     filter: "item",
-                    values: ["vm01", "vm11"]
+                    values: ["01", "11"] // абсолютные значения
                 }
             }
         ],
         response: { format: "json-stat2" }
     };
 
-    const res = await fetch("https://statfin.stat.fi/PxWeb/api/v1/en/StatFin/synt/statfin_synt_pxt_12dy.px", {
+    const res = await fetch("https://statfin.stat.fi/PxWeb/api/v1/fi/StatFin/synt/statfin_synt_pxt_12dx.px", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(body)
@@ -62,7 +62,3 @@ async function fetchBirthDeathData(code) {
         colors: ['#63d0ff', '#363636']
     });
 }
-
-window.addEventListener("DOMContentLoaded", () => {
-    fetchBirthDeathData(selectedCode);
-});
